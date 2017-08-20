@@ -1,0 +1,45 @@
+ {{!-- * Setup the `index.handlebars` to have the template that Handlebars can render onto.
+
+     * Create a button in `index.handlebars` that will submit the user input into the database. --}}
+
+<div class="header-main">
+	<div class="header1">Burger Time!</div>
+	<img class = "logo" src="public/assets/img/logo.png">
+</div>
+
+<div class="panel-input">
+	<input class="input-field" id="new-burger" type="text" placeholder=" New burger name">
+	<div>
+		<button class="btn-add" id="add-burger">Add Burger</button>
+	</div>
+</div>
+
+<div class="content">
+	<div class="panel-float panel-available">
+		<div class="header2">Burgers that have not been eaten</div>
+		<ul id="available-burgers">
+			{{#each burgers }}
+			{{#unless devoured}}
+				<li>{{burger_name}}
+				<button class="btn-eat js-eat-burger" data-id={{id}}>eat the burger!</button>
+				</li>
+			{{/unless}}
+		{{/each}}
+		</ul>
+	</div>
+
+	<div class="panel-float panel-devoured">
+		<div class="header2">Burgers that have been eaten</div>
+		<ul id="devoured-burgers">
+		{{#each burgers }}
+			{{#if devoured}}
+				<li>{{burger_name}}</li>
+			{{/if}}
+		{{/each}}
+		</ul>
+	</div>
+</div>
+
+
+
+			

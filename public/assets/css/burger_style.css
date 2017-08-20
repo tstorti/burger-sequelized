@@ -1,0 +1,88 @@
+/*  custom styles */
+body{
+    background-color:#550000;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.35;
+    color: black;
+}
+.btn-add{
+    padding:10px;
+    background-color:#801515;
+    color: #C9C414;
+    margin-top:10px;
+    border-radius:5px;
+    width:300px;
+}
+.btn-add:hover{
+    background-color:#D46A6A;
+}
+.btn-eat{
+    padding:10px;
+    margin-left:10px;
+    background-color:#801515;
+    color: #C9C414;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+.btn-eat:hover{
+    background-color:#D46A6A;
+}
+.content{
+    width:950px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.header1{
+    font-size:36px;
+    color: #C9C414;
+    text-align:center;
+}
+.header2{
+    color: #550000;
+    font-size:18px;
+}
+.header-main{
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+}
+.input-field{
+    width:300px
+}
+.logo{
+    width:300px;
+}
+.panel-available{
+    width:400px;
+    background-color: #BFCEBF;
+    color:black;
+    padding:20px;
+    margin:10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.panel-devoured{
+    width:400px;
+    background-color: #BFCEBF;
+    color:black;
+    padding:20px;
+    margin:10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.panel-float{
+    float: left;
+}
+.panel-input{
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-50px;
+    background-color: #BFCEBF;
+    color:black;
+    padding:20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
