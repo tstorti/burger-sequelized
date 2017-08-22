@@ -1,6 +1,5 @@
 {
   "development": {
-    "use_env_variable": "process.env.JAWSDB_URL",
     "username": "root",
     "password": "",
     "database": "burger_sequelized",
@@ -8,7 +7,6 @@
     "dialect": "mysql"
   },
   "test": {
-    "use_env_variable": "process.env.JAWSDB_URL",
     "username": "root",
     "password": "",
     "database": "burger_sequelized",
@@ -16,6 +14,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "process.env.JAWSDB_URL"
+    "use_env_variable": "DATABASE_URL"
   }
 }
