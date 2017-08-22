@@ -8,6 +8,21 @@
 </div>
 
 <div class="panel-input">
+	<div class="customers">
+		<div class="input-field">
+			<label for="customer">Select Customer:</label>
+			<select class="form-control" id="customer">
+				{{#each customers }}
+				<option value={{id}}>{{name}}</option>
+				{{/each}}			
+			</select>
+		</div>
+		<input class="input-field" id="new-customer" type="text" placeholder=" Add new customer">
+		<div>
+			<button class="btn-add" id="add-customer">Add Customer</button>
+		</div>
+	</div>
+
 	<input class="input-field" id="new-burger" type="text" placeholder=" New burger name">
 	<div>
 		<button class="btn-add" id="add-burger">Add Burger</button>
@@ -20,8 +35,8 @@
 		<ul id="available-burgers">
 			{{#each burgers }}
 			{{#unless devoured}}
-				<li>{{burger_name}}
-				<button class="btn-eat js-eat-burger" data-id={{id}}>eat the burger!</button>
+				<li>{{name}}
+					<button class="btn-eat js-eat-burger" data-id={{id}}>eat the burger!</button>
 				</li>
 			{{/unless}}
 		{{/each}}
@@ -33,7 +48,7 @@
 		<ul id="devoured-burgers">
 		{{#each burgers }}
 			{{#if devoured}}
-				<li>{{burger_name}}</li>
+				<li>{{name}} eaten by {{CustomerId}}</li>
 			{{/if}}
 		{{/each}}
 		</ul>
