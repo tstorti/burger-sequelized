@@ -7,13 +7,17 @@ var router = {
     //landing page for app - render all burgers, handlebars index template will categorize based on devoured state
     index: function(app){
         app.get("/", function(req, res) {
-            db.Burger.findAll({}).then(function(result1) {
+            db.Burger.findAll({
+                include: [{
+                    model: db.Customer
+                }]
+            }).then(function(result1) {
                 db.Customer.findAll({}).then(function(result2){
                     res.render("index", {
                         "burgers": result1,
-                        "customers": result2,
+                        "customers":result2
                     });
-                });
+                })
             });
         });
     },

@@ -1,21 +1,27 @@
 
 //changes devoured status of selected burger
 $(document).on("click", ".js-eat-burger", function(){
+    $("#warning").text("");
 
     console.log("customer id: "+ $("#customer").val())
     //run a post call to change burger to "devoured" in database, update display
     var currentURL = window.location.origin;
     var burgerID = {"id": $(this).attr("data-id"), "customer":$("#customer").val()};
-
-    //update devoured status to true for that burger
-    $.post(currentURL + "/devour", burgerID, function(response){
-        
-        // success: reload the page with added burger data
-        if (response.result == 'redirect') {
-            //redirecting to main page from here.
-            window.location.replace(response.url);
-        }
-    });
+    if ($("#customer").val() !== ""){
+        //update devoured status to true for that burger
+        $.post(currentURL + "/devour", burgerID, function(response){
+            
+            // success: reload the page with added burger data
+            if (response.result == 'redirect') {
+                //redirecting to main page from here.
+                window.location.replace(response.url);
+            }
+        });
+    }
+    else{
+        $("#warning").text("You must select a customer");
+    }
+    
 
 
 });

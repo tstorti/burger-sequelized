@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/tstorti/burger-sequelized/issues"
   },
+  "engines": {
+    "node": "6.10.2"
+  },
   "homepage": "https://github.com/tstorti/burger-sequelized#readme",
   "dependencies": {
     "body-parser": "^1.17.2",

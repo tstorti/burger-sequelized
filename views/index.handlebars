@@ -8,11 +8,19 @@
 </div>
 
 <div class="panel-input">
+	<div class="burgers">
+		<input class="input-field" id="new-burger" type="text" placeholder=" New burger name">
+		<div>
+			<button class="btn-add" id="add-burger">Add Burger</button>
+		</div>
+	</div>
+
 	<div class="customers">
 		<div class="input-field">
 			<label for="customer">Select Customer:</label>
 			<select class="form-control" id="customer">
-				{{#each customers }}
+				<option value=""></option>
+				{{#each customers}}
 				<option value={{id}}>{{name}}</option>
 				{{/each}}			
 			</select>
@@ -23,10 +31,8 @@
 		</div>
 	</div>
 
-	<input class="input-field" id="new-burger" type="text" placeholder=" New burger name">
-	<div>
-		<button class="btn-add" id="add-burger">Add Burger</button>
-	</div>
+	
+	<div id="warning"></div>
 </div>
 
 <div class="content">
@@ -48,7 +54,7 @@
 		<ul id="devoured-burgers">
 		{{#each burgers }}
 			{{#if devoured}}
-				<li>{{name}} eaten by {{CustomerId}}</li>
+				<li>{{name}} eaten by {{Customer.name}}</li>
 			{{/if}}
 		{{/each}}
 		</ul>

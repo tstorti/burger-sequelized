@@ -27,6 +27,9 @@ body{
 .btn-eat:hover{
     background-color:#D46A6A;
 }
+.burgers{
+    margin-bottom:25px;
+}
 .content{
     width:950px;
     margin-right:auto;
